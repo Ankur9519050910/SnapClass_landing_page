@@ -171,6 +171,23 @@ p {
     gap: 12px;
 }
 
+.btn-white {
+    background-color: white;
+    color: var(--primary);
+    padding: 16px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    gap: 8px;
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0;
+}
+
 .btn-cta:hover {
     background-color: #333333;
 }
@@ -775,4 +792,11 @@ p {
     .main-footer {
         padding: 50px 16px 25px;
     }
+
+    .purple-section .btn-white {
+    width: auto;
+    max-width: 280px;
+    padding: 14px 24px;
+    font-size: 0.9rem;
+}
 }
