@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Titan+One&display=swap');
 
-:root {
-    --bg-main: #F0F4FF;
-    --primary: #5865F2;
-    --text-muted: #64748b;
-}
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -17,188 +15,211 @@ html {
 }
 
 body {
-    background-color: var(--bg-main);
-    color: white;
     font-family: 'Outfit', sans-serif;
+    background: #f1f1ff;
+    color: #000;
     overflow-x: hidden;
-    line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Climate Crisis', sans-serif;
-    line-height: 1.1;
-    word-break: break-word;
-    color: var(--primary);
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-p {
-    color: purple;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-/* ================= NAVBAR ================= */
+/* =========================
+   HEADINGS
+   TITAN ONE ONLY
+========================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400;
+    line-height: 1.08;
+    color: #000;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
+    width: 100%;
+    height: 92px;
+    background: #000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 12px 40px;
-    background-color: black;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .logo img {
+    width: 38px;
     height: 38px;
-    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .logo-text {
-    font-family: 'Climate Crisis', sans-serif;
-    font-size: 1.6rem;
+    font-family: 'Titan One', sans-serif;
+    font-size: 1.35rem;
     color: white;
-    line-height: 0.8;
-    font-weight: 500;
 }
 
 .nav-link {
     display: flex;
-    gap: 40px;
+    align-items: center;
+    gap: 42px;
+    margin-left: auto;
+    margin-right: 70px;
 }
 
 .nav-link a {
-    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
     color: white;
+    font-size: 1rem;
     font-weight: 500;
-    font-size: 0.95rem;
+    transition: 0.25s ease;
 }
 
 .nav-link a:hover {
-    color: var(--primary);
+    color: #5865f2;
 }
 
-/* ================= NAV BUTTON ================= */
+.nav-cta {
+    flex-shrink: 0;
+}
 
 .btn-pill {
-    background-color: white;
-    color: black;
-    padding: 13px 32px;
-    border-radius: 100px;
-    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    background: white;
+    color: #000;
+    padding: 17px 30px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    white-space: nowrap;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.25s ease;
 }
 
 .btn-pill:hover {
-    background-color: #f0f0f0;
+    transform: translateY(-2px);
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 70vh;
+    position: relative;
+    min-height: 570px;
+    padding: 55px 20px 80px;
+    background: #f1f1ff;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 100px 40px;
-    background-color: #f0f0ff;
 }
 
 .badge {
-    display: inline-flex;
-    align-items: center;
-    background-color: white;
-    border: 1px solid rgb(225, 198, 225);
-    border-radius: 100px;
-    padding: 10px 20px;
-    font-size: 0.85rem;
+    font-family: 'Outfit', sans-serif;
+    color: #5865f2 !important;
+    background: white;
+    border: 1px solid #e5c9e8;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 32px;
+    margin-bottom: 35px;
 }
 
 .hero h1 {
-    font-size: 5rem;
-    color: black;
-    max-width: 1000px;
-    margin-bottom: 24px;
-    line-height: 1;
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400;
+    font-size: clamp(3.5rem, 6vw, 5.8rem);
+    line-height: 1.02;
+    letter-spacing: 0;
+    max-width: 1050px;
+    margin: 0 auto 30px;
+    color: #000;
 }
 
 .hero h1 span {
-    color: var(--primary);
+    color: #5865f2;
 }
 
 .hero p {
+    font-family: 'Outfit', sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #64748b !important;
     font-size: 1.25rem;
-    color: var(--text-muted);
-    max-width: 650px;
-    margin-bottom: 56px;
+    line-height: 1.7;
     font-weight: 400;
 }
 
-/* ================= HERO BUTTONS ================= */
+/* =========================
+   HERO ACTION
+========================= */
 
 .hero-action {
+    position: relative;
+    z-index: 10;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 60px;
+    align-items: center;
+    gap: 25px;
+    margin-top: -30px;
+    margin-bottom: 55px;
 }
 
 .btn-cta {
-    background-color: black;
+    font-family: 'Outfit', sans-serif;
+    background: #000;
     color: white;
-    border-radius: 100px;
-    text-decoration: none;
     padding: 20px 48px;
-    font-size: 1.1rem;
-    display: inline-flex;
+    border-radius: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+    font-size: 1.05rem;
     font-weight: 700;
-    gap: 12px;
-}
-
-.btn-white {
-    background-color: white;
-    color: var(--primary);
-    padding: 16px 32px;
-    border-radius: 100px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    gap: 8px;
-}
-
-.btn-white:hover {
-    background-color: #f0f0f0;
+    transition: 0.25s ease;
 }
 
 .btn-cta:hover {
-    background-color: #333333;
+    transform: translateY(-3px);
 }
 
 .link-action {
-    color: var(--text-muted);
-    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    color: #64748b;
+    font-size: 1rem;
     font-weight: 600;
 }
 
-/* ================= FLOATING CARDS ================= */
+/* =========================
+   FLOATING HERO CARDS
+========================= */
 
 .floating-card {
     position: absolute;
@@ -208,112 +229,165 @@ p {
     border-radius: 36px;
     border: 1px solid #e5e7eb;
     overflow: hidden;
+    z-index: 5;
+}
+
+.card-left {
+    left: 2.5%;
+    bottom: 10px;
+}
+
+.card-right {
+    right: 2.5%;
+    bottom: 10px;
 }
 
 .floating-card img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+    height: 165px;
     object-fit: cover;
     border-radius: 24px;
-    background-color: gray;
 }
 
-.card-left {
-    left: 40px;
-    top: 66%;
-}
-
-.card-right {
-    right: 40px;
-    top: 66%;
-}
-
-/* ================= FEATURES ================= */
+/* =========================
+   FEATURES
+========================= */
 
 .features {
-    padding: 120px 80px;
-    background-color: white;
+    padding: 110px 40px;
+    background: white;
     text-align: center;
 }
 
 .features h2 {
-    font-size: 3.5rem;
-    margin-bottom: 60px;
+    font-family: 'Titan One', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    margin-bottom: 65px;
 }
 
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 35px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .feature-card {
-    padding: 60px 40px;
+    padding: 55px 40px;
+    background: white;
+    border: 1px solid #e1e5ed;
     border-radius: 40px;
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
 }
 
 .f-icon-box {
     width: 80px;
     height: 80px;
-    background-color: #f8faff;
-    border-radius: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto 30px;
-    font-size: 2.5rem;
+    border-radius: 24px;
+    background: #f5f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.3rem;
 }
 
 .feature-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 16px;
-    font-weight: 800;
+    font-family: 'Titan One', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    margin-bottom: 18px;
 }
 
 .feature-card p {
-    color: var(--text-muted);
+    font-family: 'Outfit', sans-serif;
+    color: #64748b;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
-/* ================= PURPLE SECTION ================= */
+/* =========================
+   PURPLE CTA SECTION
+========================= */
 
 .purple-section {
-    background-color: var(--primary);
-    color: white;
-    padding: 100px 80px;
+    margin: 50px 2%;
+    padding: 100px 30px;
+    background: #5865f2;
+    border-radius: 70px;
     text-align: center;
-    border-radius: 80px;
-    margin: 40px;
+    color: white;
 }
 
 .purple-section h2 {
-    font-size: 3.5rem;
-    margin-bottom: 24px;
+    font-family: 'Titan One', sans-serif;
     color: white;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    max-width: 1100px;
+    margin: 0 auto 35px;
 }
 
 .purple-section p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    font-family: 'Outfit', sans-serif;
     color: white;
+    font-size: 1.25rem;
+    margin-bottom: 45px;
 }
 
-/* ================= TEACHER JOURNEY ================= */
+.btn-white {
+    font-family: 'Outfit', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 38px;
+    border-radius: 50px;
+    background: white;
+    color: #5865f2;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.btn-white:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   TEACHER JOURNEY
+========================= */
 
 .teacher-flow {
     padding: 120px 80px;
+    background: #f1f1ff;
 }
 
 .flow-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.teacher-flow .section-tag {
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    color: #5865f2;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.teacher-flow > .flow-container > h2 {
+    font-family: 'Titan One', sans-serif;
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    margin-bottom: 90px;
 }
 
 .flow-step {
@@ -323,37 +397,48 @@ p {
     margin-bottom: 120px;
 }
 
+/* Keep the original straight layout */
+.flow-step:nth-child(even) {
+    flex-direction: row;
+}
+
 .flow-content {
     flex: 1;
 }
 
 .step-badge {
-    color: var(--primary);
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-    font-size: 0.9rem;
     display: block;
+    font-family: 'Outfit', sans-serif;
+    color: #5865f2;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
     text-transform: uppercase;
 }
 
 .flow-content h3 {
-    font-size: 3.2rem;
+    font-family: 'Titan One', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
     margin-bottom: 24px;
 }
 
 .flow-content p {
+    font-family: 'Outfit', sans-serif;
+    color: #64748b;
     font-size: 1.15rem;
-    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
 .flow-image {
     flex: 1.4;
     border-radius: 40px;
-    background-color: white;
-    border: 1px solid #e5e7eb;
     overflow: hidden;
+    background: white;
+    border: 1px solid #e5e7eb;
 }
 
 .flow-image img {
@@ -362,117 +447,141 @@ p {
     display: block;
 }
 
-/* ================= TECH STACK ================= */
+/* =========================
+   TECH STACK
+========================= */
 
 .tech-stack {
-    padding: 80px 40px;
-    background-color: #7c4dff;
-    border-radius: 60px;
-    margin: 40px;
+    padding: 100px 40px;
+    margin: 40px 2%;
+    background: #7647ff;
+    border-radius: 70px;
     text-align: center;
 }
 
-.tech-stack h2 {
-    font-size: 3.3rem;
-    margin-bottom: 12px;
-    color: white;
-}
-
 .tech-stack .section-tag {
+    font-family: 'Outfit', sans-serif;
     color: white;
     font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tech-stack h2 {
+    font-family: 'Titan One', sans-serif;
+    color: white;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    margin-bottom: 60px;
 }
 
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 20px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
 }
 
 .tech-card {
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 30px 20px;
-    border-radius: 30px;
-    text-align: center;
+    min-height: 340px;
+    padding: 35px 25px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 18px;
 }
 
 .t-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
-    background-color: white;
-    min-width: 60px;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    justify-content: center;
+    font-size: 2rem;
 }
 
 .tech-card h4 {
-    font-size: 1.15rem;
-    margin-bottom: 6px;
+    font-family: 'Titan One', sans-serif;
     color: white;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
+    font-size: 1.35rem;
+    font-weight: 400;
 }
 
 .tech-card p {
+    font-family: 'Outfit', sans-serif;
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    font-weight: 400;
 }
 
 .tech-tag {
+    font-family: 'Outfit', sans-serif;
     display: inline-block;
-    background-color: #4BB786;
+    background: #48c78e;
     color: white;
-    border-radius: 8px;
-    font-size: 0.65rem;
-    margin-top: 10px;
-    padding: 2px 10px;
-    font-weight: 800;
+    border-radius: 10px;
+    padding: 7px 13px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: auto;
 }
 
-/* ================= FOOTER ================= */
+/* =========================
+   STUDENT JOURNEY
+========================= */
+
+.student-journey {
+    padding: 120px 80px;
+    background: #f1f1ff;
+}
+
+.student-journey h2 {
+    font-family: 'Titan One', sans-serif;
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    margin-bottom: 90px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 .main-footer {
-    padding: 100px 80px 40px;
-    background-color: black;
+    background: #000;
     color: white;
-    border-top: 1px solid #333333;
+    padding: 80px 7% 30px;
 }
 
-.main-footer .footer-grid {
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
-}
-
-.footer-brand .logo {
-    margin-bottom: 24px;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 60px;
 }
 
 .footer-brand p {
-    color: #cccccc;
-    font-size: 1rem;
-    max-width: 320px;
+    font-family: 'Outfit', sans-serif;
+    color: #a1a1aa;
     line-height: 1.6;
-}
-
-.footer-brand .logo-text {
-    color: white;
+    max-width: 330px;
+    margin-top: 25px;
 }
 
 .footer-links h4 {
-    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
     color: white;
-    margin-bottom: 32px;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .footer-links ul {
@@ -480,41 +589,84 @@ p {
 }
 
 .footer-links li {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .footer-links a {
-    text-decoration: none;
-    color: #cccccc;
+    font-family: 'Outfit', sans-serif;
+    color: #a1a1aa;
     font-size: 0.95rem;
-    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: white;
 }
 
 .footer-bottom {
-    padding-top: 40px;
-    border-top: 1px solid #333333;
-    text-align: center;
     grid-column: 1 / -1;
+    border-top: 1px solid #222;
+    padding-top: 25px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .footer-bottom p {
-    color: #999999;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    color: #777;
+    font-size: 0.85rem;
 }
 
-/* ================= MOBILE ================= */
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-link {
+        gap: 22px;
+        margin-right: 25px;
+    }
+
+    .floating-card {
+        width: 260px;
+    }
+
+    .feature-grid {
+        gap: 20px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-step {
+        gap: 40px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
-    /* NAVBAR */
-
     .navbar {
-        padding: 10px 20px;
+        height: 72px;
+        padding: 0 16px;
     }
 
     .navbar .logo-text {
         display: none;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
     }
 
     .nav-link {
@@ -522,70 +674,72 @@ p {
     }
 
     .btn-pill {
-        padding: 12px 22px;
-        font-size: 0.85rem;
+        padding: 12px 18px;
+        font-size: 0.82rem;
     }
 
     /* HERO */
 
     .hero {
-        min-height: 65vh;
-        padding: 60px 20px;
+        min-height: auto;
+        padding: 45px 18px 65px;
     }
 
     .badge {
-        padding: 9px 18px;
+        padding: 10px 18px;
         font-size: 0.8rem;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-family: 'Titan One', sans-serif;
+        font-size: clamp(2.25rem, 10vw, 3.4rem);
+        line-height: 1.08;
+        letter-spacing: 0;
         max-width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 28px;
     }
 
     .hero p {
+        font-family: 'Outfit', sans-serif;
         font-size: 1rem;
+        line-height: 1.65;
         max-width: 100%;
-        margin-bottom: 32px;
     }
 
-    /* HERO ACTION */
-
-    .hero-action {
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 40px;
-        padding: 0 20px;
-    }
-
-    .btn-cta {
-        width: 85%;
-        max-width: 320px;
-        padding: 14px 24px;
-        font-size: 1rem;
-    }
-
-    .link-action {
-        font-size: 0.95rem;
-    }
-
-    /* FLOATING CARDS */
+    /* Hide floating cards on mobile */
 
     .floating-card {
         display: none;
     }
 
+    /* HERO BUTTON */
+
+    .hero-action {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 0 18px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .btn-cta {
+        width: auto;
+        min-width: 250px;
+        padding: 16px 28px;
+        font-size: 0.95rem;
+    }
+
     /* FEATURES */
 
     .features {
-        padding: 80px 20px;
+        padding: 70px 18px;
     }
 
     .features h2 {
+        font-family: 'Titan One', sans-serif;
         font-size: 2.4rem;
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 
     .feature-grid {
@@ -594,209 +748,265 @@ p {
     }
 
     .feature-card {
-        padding: 30px 20px;
+        padding: 35px 22px;
         border-radius: 30px;
     }
 
-    /* PURPLE SECTION */
+    .feature-card h3 {
+        font-family: 'Titan One', sans-serif;
+        font-size: 1.35rem;
+    }
+
+    /* PURPLE */
 
     .purple-section {
-        padding: 60px 20px;
-        margin: 20px;
+        margin: 25px 10px;
+        padding: 65px 20px;
         border-radius: 40px;
     }
 
     .purple-section h2 {
-        font-size: 2rem;
+        font-family: 'Titan One', sans-serif;
+        font-size: 2.25rem;
     }
 
     .purple-section p {
+        font-family: 'Outfit', sans-serif;
         font-size: 1rem;
     }
 
     /* TEACHER JOURNEY */
 
     .teacher-flow {
-        padding: 80px 20px;
+        padding: 75px 20px;
     }
 
-    .flow-step {
-        flex-direction: column !important;
-        gap: 20px;
-        margin-bottom: 60px;
+    .teacher-flow > .flow-container > h2 {
+        font-family: 'Titan One', sans-serif;
+        font-size: 2.3rem;
+        margin-bottom: 65px;
+    }
+
+    .flow-step,
+    .flow-step:nth-child(even) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        margin-bottom: 75px;
     }
 
     .flow-content {
-        width: 100%;
+        order: 1;
     }
 
     .flow-image {
+        order: 2;
         width: 100%;
-        flex: none;
-        border-radius: 20px;
+        border-radius: 25px;
     }
 
     .flow-content h3 {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
+        font-family: 'Titan One', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 15px;
     }
 
     .flow-content p {
+        font-family: 'Outfit', sans-serif;
         font-size: 1rem;
         margin-bottom: 20px;
     }
 
-    /* TECH STACK */
+    /* TECH */
 
     .tech-stack {
-        padding: 60px 20px;
-        margin: 20px;
+        padding: 65px 18px;
+        margin: 25px 10px;
         border-radius: 40px;
     }
 
     .tech-stack h2 {
-        font-size: 2.4rem;
+        font-family: 'Titan One', sans-serif;
+        font-size: 2.3rem;
+        margin-bottom: 40px;
     }
 
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
     .tech-card {
-        padding: 20px 12px;
+        min-height: 250px;
+        padding: 22px 12px;
+        border-radius: 25px;
         gap: 12px;
     }
 
     .t-icon {
-        margin: 0 auto;
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
     }
 
     .tech-card h4 {
+        font-family: 'Titan One', sans-serif;
         font-size: 0.95rem;
     }
 
     .tech-card p {
+        font-family: 'Outfit', sans-serif;
         font-size: 0.75rem;
+        line-height: 1.4;
     }
 
     .tech-tag {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: 10px;
-        display: inline-block;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.65rem;
+        padding: 5px 9px;
+    }
+
+    /* STUDENT JOURNEY */
+
+    .student-journey {
+        padding: 75px 20px;
+    }
+
+    .student-journey h2 {
+        font-family: 'Titan One', sans-serif;
+        font-size: 2.3rem;
+        margin-bottom: 60px;
     }
 
     /* FOOTER */
 
     .main-footer {
-        padding: 60px 20px 30px;
+        padding: 60px 20px 25px;
     }
 
-    .main-footer .footer-grid {
+    .footer-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 35px;
         text-align: center;
-        margin-bottom: 40px;
     }
 
     .footer-brand p {
         max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .footer-brand .logo {
-        justify-content: center;
+        margin: 20px auto 0;
     }
 
     .footer-bottom {
-        grid-column: auto;
+        margin-top: 10px;
     }
 }
 
-/* ================= SMALL MOBILE ================= */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 480px) {
 
     .navbar {
-        padding: 8px 12px;
+        padding: 0 12px;
     }
 
     .btn-pill {
-        padding: 10px 16px;
+        padding: 11px 14px;
         font-size: 0.75rem;
     }
 
     .hero {
-        min-height: 60vh;
-        padding: 50px 16px;
+        padding: 40px 15px 55px;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-family: 'Titan One', sans-serif;
+        font-size: 2.15rem;
+        line-height: 1.1;
     }
 
     .hero p {
-        font-size: 0.95rem;
-        line-height: 1.6;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.92rem;
     }
 
     .hero-action {
-        padding: 0 10px;
+        margin-bottom: 35px;
     }
 
     .btn-cta {
-        width: 85%;
-        max-width: 280px;
-        padding: 13px 20px;
-        font-size: 0.9rem;
+        min-width: 220px;
+        width: 100%;
+        padding: 15px 20px;
     }
 
-    .features h2 {
+    .features h2,
+    .teacher-flow > .flow-container > h2,
+    .tech-stack h2,
+    .student-journey h2 {
+        font-family: 'Titan One', sans-serif;
         font-size: 2rem;
     }
 
     .feature-card {
-        padding: 25px 18px;
+        padding: 30px 18px;
     }
 
     .tech-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 8px;
     }
 
     .tech-card {
-        padding: 18px 8px;
+        min-height: 230px;
     }
 
     .tech-card h4 {
-        font-size: 0.8rem;
+        font-family: 'Titan One', sans-serif;
+        font-size: 0.85rem;
     }
 
     .tech-card p {
+        font-family: 'Outfit', sans-serif;
         font-size: 0.7rem;
     }
 
-    .t-icon {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        font-size: 1.5rem;
-    }
-
     .flow-content h3 {
-        font-size: 1.6rem;
+        font-family: 'Titan One', sans-serif;
+        font-size: 1.75rem;
     }
 
-    .main-footer {
-        padding: 50px 16px 25px;
+    .step-badge {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.75rem;
     }
-
-    .purple-section .btn-white {
-    width: auto;
-    max-width: 280px;
-    padding: 14px 24px;
-    font-size: 0.9rem;
 }
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-family: 'Titan One', sans-serif;
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+    }
+
+    .btn-pill {
+        font-size: 0.7rem;
+        padding: 10px 12px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-card {
+        min-height: 210px;
+    }
 }
